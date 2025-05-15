@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
+.navbar {
+    z-index: 1000;
+}
+
+.navholder {
+    width: 100%;
+    max-width: 900px;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-title {
+    font-family: 'Wendy One', sans-serif;
+    color: #FFA01B;
+    cursor: pointer;
+    position: relative;
+    text-shadow:
+        -6px 6px 0 #E8476A,
+        -9px 9px 0 purple;
+    font-size: 1.5rem;
+}
+
+.nav-title:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 5px;
+    bottom: -10px;
+    left: -4px;
+    transform: scaleX(0);
+    box-shadow:
+        0 5px 0 #E8476A,
+        0 10px 0 purple;
+    background: #FFA01B;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.nav-title:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#nav-links {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: 'Wendy One', sans-serif;
+}
+
+#nav-links li {
+    margin: 0 20px;
+    position: relative;
+    list-style: none;
+}
+
+#nav-links li a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    font-size: 17px;
+    line-height: 1;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: var(--nav-link);
+    background-size: 200% 100%;
+    background-position: -100%;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav-links li a:before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 3px;
+    bottom: 5px;
+    left: 0;
+    bottom: -3px;
+    z-index: 0;
+    position: absolute;
+    background: #E8476A;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav-links li a:hover {
+    background-position: 0%;
+}
+
+#nav-links li a:hover:before {
+    width: 100%;
+}
+
+.nav-button-holder {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#bg-mode-button {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#bg-mode-button svg path {
+    fill: var(--nav-menu);
+    transition: fill 0.3s ease;
+}
+
+#bg-mode-button:hover svg path {
+    fill: red;
+}
+
+#bg-mode-button:hover {
+    animation: bounce 0.5s ease;
+}
+
+
+.nav-menu {
+    position: fixed;
+    top: 70px;
+    height: calc(100vh - 75px);
+    left: 0.3rem;
+    right: 0.3rem;
+    padding: 2rem;
+    background: var(--nav-menu-bg);
+    border: 5px solid rgb(245, 238, 245);
+    border-radius: 10px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu.show {
+    animation: slideIn 0.3s forwards ease-in-out;
+}
+
+.nav-menu.hide {
+    animation: slideOut 0.3s forwards ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
+#nav-menu li {
+    margin: 0 20px;
+    position: relative;
+    list-style: none;
+    font-family: 'Wendy One', sans-serif;
+}
+
+#nav-menu li a {
+    text-decoration: none;
+    display: block;
+    padding: 20px 0;
+    font-size: 35px;
+    line-height: 1;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #FB3FEB, #FC4646 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav-menu li a:before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 3px;
+    bottom: 5px;
+    left: 0;
+    bottom: -3px;
+    z-index: 0;
+    position: absolute;
+    background: #E8476A;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav-menu li a:hover {
+    background-position: 0%;
+}
+
+#nav-menu li a:hover:before {
+    width: 100%;
+}
+
+
+@media (max-width: 900px) {
+    .navholder {
+        justify-content: space-between;
+    }
+
+    #nav-links {
+        display: none;
+    }
+}

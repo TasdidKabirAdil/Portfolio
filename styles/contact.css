@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    display: grid;
+    height: 100%;
+    position: relative;
+    color: var(--body-text);
+    /* overflow-x: hidden; */
+}
+
+#hero-bg {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    grid-column: 1;
+    grid-row: 1;
+    background: var(--hero-bg);
+}
+
+#nav-placeholder {
+    top: 0;
+    height: fit-content;
+    position: sticky;
+    z-index: 1000;
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 50px;
+}
+
+#main {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    height: 100%;
+    top: 0;
+    /* color: white; */
+    margin: auto;
+    padding: 0 10px 50px 10px;
+}
+
+.title {
+    font-family: 'Wendy One', sans-serif;
+    font-size: clamp(3rem, 5vw, 4rem);
+    text-align: center;
+    padding-bottom: 5%;
+    color: var(--title);
+    -webkit-text-stroke: .5px var(--title-border);
+}
+
+.contact {
+    display: grid;
+    height: 800px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    position: relative;
+}
+
+.img {
+    width: 120%;
+    height: 100%;
+    margin-top: 325px;
+    max-height: 450px;
+    background-image: var(--contact-bg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.form {
+    width: 110%;
+    height: fit-content;
+    border: 2px solid var(--title-border);
+    margin-left: -10%;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 50px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.input-group input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--title-border);
+    color: var(--body-text);
+
+
+}
+
+.input-group input:focus,
+.input-group input:not(:placeholder-shown) {
+    outline: none;
+}
+
+.input-group span {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    color: var(--title-border);
+    pointer-events: none;
+    transition: 0.2s ease all;
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+}
+
+/* When input is focused or has text, move label up */
+.input-group input:focus+span,
+.input-group input:not(:placeholder-shown)+span {
+    top: -25px;
+    color: #E8476A;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #FFA01B;
+    color: var(--title-border);
+    border: none;
+    border-radius: 30px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 22px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #E8476A;
+    }
+}
+
+
+.socials svg {
+    fill: var(--title-border);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.socials svg:hover {
+    fill: #FFA01B;
+    box-shadow: 0 0 5px #FFA01B;
+    transition: all 0.3s ease;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+@media (min-height: 950px) {
+    body {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 950px) {
+    #hero-bg {
+        height: 200px;
+    }
+
+    #nav-placeholder {
+        margin-top: 0;
+    }
+
+    .contact {
+        height: auto;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .form {
+        width: 100%;
+        position: relative;
+        background-image: var(--contact-bg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        color: white;
+    }
+
+    .socials svg {
+    fill: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+} 

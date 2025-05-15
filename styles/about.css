@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Fontdiner+Swanky&family=Geologica:wght@100..900&family=Indie+Flower&family=Joti+One&family=Luckiest+Guy&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Geologica:wght@100..900&family=Indie+Flower&family=Joti+One&family=Luckiest+Guy&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Geologica:wght@100..900&family=Indie+Flower&family=Joti+One&family=Luckiest+Guy&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    display: grid;
+    height: 100%;
+    position: relative;
+    color: var(--body-text);
+    /* overflow-x: hidden; */
+}
+
+#nav-placeholder {
+    top: 0;
+    height: fit-content;
+    position: sticky;
+    z-index: 1000;
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 50px;
+    background-color:  var(--bg);
+    margin-top: 0;
+}
+
+.parallax {
+    background-image: url("../images/parallax.jpg");
+    min-height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote {
+    position: absolute;
+    top: 8%;
+    font-family: "Bilbo Swash Caps", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    color: white;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+
+.typewriter {
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+
+#main {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    top: 0;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.title {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.title h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-family: 'Wendy One', sans-serif;
+    color: var(--title);
+    -webkit-text-stroke: 0.5px var(--title-border);
+}
+
+.title p {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    font-family: "Fontdiner Swanky", sans-serif;
+}
+
+.background {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5%;
+    color: var(--project-card-span-1);
+}
+
+.background h1 {
+    font-family: "Joti One", sans-serif;
+}
+
+.background-img {
+    width: 110%;
+    height: 100%;
+    max-height: 420px;
+    overflow: hidden;
+}
+
+.background-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.background-desc {
+    background: var(--desc);
+    padding: 2rem;
+    margin-left: -30px;
+    margin-top: 80px;
+}
+
+.background-desc h1 {
+    font-family: "Joti One", sans-serif;
+}
+
+.background-desc p {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    font-family: "Edu VIC WA NT Beginner", sans-serif;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.intersection {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 1s;
+    margin-bottom: 5%;
+}
+
+.intersection:after,
+.intersection:before {
+    content: " ";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transition: all 1s;
+}
+
+.intersection:after {
+    top: -1px;
+    left: -1px;
+    border-top: 5px solid #E8476A;
+    border-left: 5px solid #E8476A;
+}
+
+.intersection:before {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 5px solid #E8476A;
+    border-right: 5px solid #E8476A;
+}
+
+.intersection:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.intersection:hover:before,
+.intersection:hover:after {
+    width: 100%;
+    height: 100%;
+}
+
+.intp-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 0 10px 0 10px;
+    gap: 10px;
+    margin-bottom: 5%;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill h3 {
+    font-family: "Joti One", sans-serif;
+}
+
+.skill p {
+    font-family: "Indie Flower", sans-serif;
+}
+
+.skill img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    filter: var(--invert);
+}
+
+.education {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-bottom: 5%;
+    color: var(--project-card-span-1);
+}
+
+.education-img {
+    width: 110%;
+    height: 100%;
+    max-height: 420px;
+    overflow: hidden;
+    margin-left: -10%;
+    z-index: -1;
+}
+
+.education-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.education-desc {
+    background: var(--desc);
+    padding: 2rem;
+    margin-right: -30px;
+    margin-top: 80px;
+}
+
+.education-desc h1 {
+    font-family: "Joti One", sans-serif;
+}
+
+.education-desc p {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    font-family: "Edu VIC WA NT Beginner", sans-serif;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.h1-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-family: 'Wendy One', sans-serif;
+    margin-bottom: 5%;
+    color: var(--title);
+    -webkit-text-stroke: 0.5px var(--title-border);
+}
+
+.hobbies {
+    color: #adc2ea;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 5%;
+}
+
+.card-container .card {
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+
+}
+
+.card-container .card h2 {
+    font-family: "Joti One", sans-serif;
+}
+
+.card-container .card p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-family: "Edu VIC WA NT Beginner", sans-serif;
+}
+
+.card-container .card a {
+    padding: 30px;
+    width: 100%;
+    height: 320px;
+    border: 2px solid var(--title-border);
+    background: rgb(10, 25, 47);
+    text-decoration: none;
+    display: block;
+    transition: 0.25s ease;
+}
+
+.card-container .card a:hover {
+    transform: translate(-30px, -30px);
+    border-color: #E8476A;
+}
+
+.card-container .card a:hover .card--display {
+    display: none;
+}
+
+.card-container .card a:hover .card--hover {
+    display: block;
+    text-wrap: wrap;
+}
+
+.card-container .card--display {
+    position: absolute;
+    bottom: 30px;
+}
+
+.card-container .card a .card--hover {
+    display: none;
+}
+
+.card-container .card a .card--hover p {
+    font-weight: normal;
+    line-height: 1.5;
+    white-space: normal;
+}
+
+.card-container .card .card--border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 2px dashed var(--title-border);
+    z-index: -1;
+}
+
+@media (max-width: 900px) {
+    .typewriter {
+        border-right: none;
+        animation: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .card-container .card a:hover {
+        transform: none;
+    }
+
+    .background {
+        grid-template-columns: 1fr;
+        color: #adc2ea;
+    }
+
+    .background-img {
+        display: none;
+    }
+
+    .background-desc {
+        background-image: url("../images/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 0;
+        margin-top: 0;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .education {
+        grid-template-columns: 1fr;
+        color: #adc2ea;
+    }
+
+    .education-img {
+        display: none;
+    }
+
+    .education-desc {
+        background-image: url("../images/education.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 0;
+        margin-top: 0;
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+@media (max-width: 440px) {
+    .card-container .card a {
+        height: 230px;
+    }
+}

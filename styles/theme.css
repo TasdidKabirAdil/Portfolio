@@ -1,0 +1,53 @@
+:root {
+    --bg: rgba(3, 8, 14, 255);
+    --body-text: #DBE2EF;
+    --hero-bg: linear-gradient(to top, #03080e 0%, #03080e 1%, #e5c459 2%, #994a00 100%);
+    --nav-link: linear-gradient(to right, #FFA01B, #E8476A 50%, white 50%);
+    --nav-menu: white;
+    --nav-menu-bg: radial-gradient(circle, rgba(255, 160, 27, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    --footer-bg: linear-gradient(  to bottom, #03080e 0%, #03080e 1%, #FFA01B 2%, #E8476A 100%);
+    --title: #E8476A;
+    --title-border: white;
+    --project-card-span-1: #adc2ea;
+    --project-card-span-2: #DBE2EF;
+    --feature: #adc2ea;
+    --aurora: block;
+    --aurora-color: none;
+    --aurora-stroke: none;
+    --box-border: black;
+    --table-border: #2c3e50;
+    --thead: #050c15;
+    --tr-even: #10161e;
+    --tr-odd: #0e1114;
+    --invert: invert(1);
+    --desc: #48474798;
+    --contact-bg: url("../images/contact-bg-dark.jpg");
+}
+
+.light {
+    --bg: #D4EBF8;
+    --body-text: black;
+    --hero-bg: linear-gradient(to top, #DBE2EF 0%, #DBE2EF 1%, #a9d7e7 2%, #3b5bf9 100%);
+    --nav-link: linear-gradient(to right, #FFA01B, #E8476A 50%, #e22750 50%);
+    --nav-menu: #FFA01B;
+    --nav-menu-bg: radial-gradient(circle, #a9d7e7 0%, #3b5bf9 100%);
+    --footer-bg: linear-gradient(  to bottom, #DBE2EF 0%, #DBE2EF 1%, #a9d7e7 2%, #3b5bf9 100%);
+    --title: #E8476A;
+    --title-border: black;
+    --project-card-span-1: black;
+    --project-card-span-2: rgb(52, 52, 52);
+    --feature: black;
+    --feature-hover: #adc2ea;
+    --aurora: none;
+    --aurora-color: #FFA01B;
+    --aurora-stroke: 1px black;
+    --box-border: #D4EBF8;
+    --table-border: #000000;
+    --thead: #5a96f0;
+    --tr-even: #D4EBF8;
+    --tr-odd: #a9d7e7;
+    --invert: none;
+    --desc: #3076de5f;
+    --contact-bg: url("../images/contact-bg-light.jpg");
+}
+

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicycle Theft Predictive Analysis - Tasdid Kabir Adil</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/project.css">
+    <link rel="stylesheet" href="../styles/button.css">
+    <link rel="stylesheet" href="../styles/theme.css">
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light');
+        }
+    </script>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+    <section id="main">
+        <div class="content">
+            <h1 class="title">Bicycle Theft Predictive Analytsis
+                <div class="aurora">
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                </div>
+            </h1>
+        </div>
+
+        <h1 class="heading">Overview</h1>
+        <div class="overview">
+            <p>This project aimed to develop a predictive machine learning model to support bicycle theft reduction
+                efforts in Toronto. By analyzing historical theft data, the team created a Logistic Regression
+                classifier to predict the likelihood of a stolen bike being recovered. The pipeline involved data
+                cleaning, transformation, feature selection, and model training with k-fold cross-validation to ensure
+                robustness. The model achieved an impressive 98.8% accuracy and was deployed via a Flask API for
+                stakeholder access, including law enforcement and city agencies.</p>
+        </div>
+
+        <h1 class="heading">Key Features</h1>
+        <div class="features">
+            <div>
+                <h2>Feature & Data Preparation</h2>
+                <p style="font-size: clamp(1rem, 5vw, 1.1rem);">The project was structured around Agile principles using
+                    Azure Boards to manage all development work across epics, features, user stories, and tasks. Each
+                    item was linked to branches, commits, and pull requests, ensuring traceability and clear development
+                    flow. This allowed for consistent progress tracking and real-time collaboration within the team.
+                </p>
+            </div>
+            <div>
+                <h2>Model Development & Evaluation</h2>
+                <p style="font-size: clamp(1rem, 5vw, 1.1rem);">A Logistic Regression model was trained using an 80/20
+                    train-test split and validated with 10-fold cross-validation, achieving an average accuracy of
+                    97.94%. Despite strong overall performance, the model showed imbalance in correctly identifying
+                    recovered bikes, which was highlighted through the confusion matrix. Still, it served as a powerful
+                    proof of concept, with a clear need for further balancing strategies in future iterations.
+                </p>
+            </div>
+            <div>
+                <h2>Deployment & Use Case</h2>
+                <p style="font-size: clamp(1rem, 5vw, 1.1rem);">To ensure real-world usability, the trained model was
+                    deployed through a Flask API. This allows predictions to be made dynamically via web requests,
+                    enabling integration with public portals or law enforcement dashboards. The solution empowers users
+                    with rapid insights into theft recovery probabilities, making it a valuable tool for urban security
+                    planning and community awareness.
+                </p>
+            </div>
+        </div>
+
+        <h1 class="heading">Gallery</h1>
+        <div class="gallery">
+            <div class="container">
+                <div class="box" style="border-top-left-radius: 3%;">
+                    <img src="../images/proj3-ss1.png" onclick="openLightbox(this)">
+                </div>
+                <div class="box" style="border-top-right-radius: 3%;">
+                    <img src="../images/proj3-ss2.png" onclick="openLightbox(this)">
+                </div>
+            </div>
+            <div class="container">
+                <div class="box" style="border-bottom-left-radius: 3%;">
+                    <img src="../images/proj3-ss3.png" onclick="openLightbox(this)">
+                </div>
+                <div class="box" style="border-bottom-right-radius: 3%;">
+                    <img src="../images/proj3-ss4.png" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="heading">Tech Stack</h1>
+        <div class="tech-stack">
+            <table class="dark-table">
+                <thead>
+                    <tr>
+                        <th>Layer</th>
+                        <th>Stack</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Processing</td>
+                        <td>Python (Pandas, NumPy)</td>
+                    </tr>
+                    <tr>
+                        <td>Data Visualization</td>
+                        <td>Matplotlib (Pyplot), Microsoft Power BI</td>
+                    </tr>
+                    <tr>
+                        <td>Feature Engineering</td>
+                        <td>Scikit-learn (preprocessing, dummy encoding)</td>
+                    </tr>
+                    <tr>
+                        <td>Modeling</td>
+                        <td>Scikit-learn Logistic Regression, K-Fold Cross Validation</td>
+                    </tr>
+                    <tr>
+                        <td>Evaluation</td>
+                        <td>Confusion Matrix, Accuracy Metrics, Cross-Validation Scoring</td>
+                    </tr>
+                    <tr>
+                        <td>Deployment</td>
+                        <td>Flask (API endpoint for prediction)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h1 class="heading">Collaborators</h1>
+        <div class="collaborators" style="margin-bottom: 80px; margin-left: 20px;">
+            <div class="container" style="justify-content: left;">
+                <div class="profile">
+                    <img src="../images/proj3-collab1.jpg" alt="" /><span class="name">Aleli</span>
+                </div>
+                <div class="profile">
+                    <img src="../images/proj3-collab2.jpg" alt="" /><span class="name">Manuel</span>
+                </div>
+                <div class="profile">
+                    <img src="../images/proj3-collab3.jpg" alt="" /><span class="name">Nguyen</span>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="heading" style="margin-top: 0;">View Project</h1>
+        <div id="button-container">
+            <div style="display: flex; flex-direction: row; align-items: center; margin-bottom: 10px;">
+                <h1 style="font-size: clamp(1rem, 5vw, 2rem)">Github - &nbsp;</h1>
+                <a href="https://github.com/TasdidKabirAdil/BicycleTheft_PredictiveAnalytics" target="_blank">
+                    <button class="view-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Click Here</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full view">
+    </div>
+
+
+    <div id="footer-placeholder" style="background: var(--footer-bg);"></div>
+
+    <script src="../scripts/projects.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+    </script>
+</body>
+
+</html>

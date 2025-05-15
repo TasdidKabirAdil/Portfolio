@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure DevOps Implementation - Tasdid Kabir Adil</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/project.css">
+    <link rel="stylesheet" href="../styles/button.css">
+    <link rel="stylesheet" href="../styles/theme.css">
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light');
+        }
+    </script>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+    <section id="main">
+        <div class="content">
+            <h1 class="title">Azure DevOps CI/CD Pipeline Implementation
+                <div class="aurora">
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                </div>
+            </h1>
+        </div>
+
+        <h1 class="heading">Overview</h1>
+        <div class="overview">
+            <p>As part of a DevOps Implementation course, I built a deployment-ready version of a Health Monitor web app
+                using ASP.NET MVC and managed the entire lifecycle through Azure DevOps. The project followed Agile
+                practices with Azure Boards tracking epics, features, user stories, and tasks. Source control was
+                handled using both GitHub and Azure Repos, with linked branches and pull requests. CI pipelines were
+                configured in Azure DevOps to automatically build and test code on every push, integrating static
+                analysis using Roslyn Analyzer. CD pipelines deployed the app to an IIS server using Web Deploy,
+                completing a secure and automated release process. The project demonstrates end-to-end DevOps practices
+                including test coverage, artifact generation, and release automation.</p>
+        </div>
+
+        <h1 class="heading">Key Features</h1>
+        <div class="features">
+            <div>
+                <h2>Agile Project Management</h2>
+                <p style="font-size: clamp(1rem, 5vw, 1.1rem);">The project was structured around Agile principles using
+                    Azure Boards to manage all development work across epics, features, user stories, and tasks. Each
+                    item was linked to branches, commits, and pull requests, ensuring traceability and clear development
+                    flow. This allowed for consistent progress tracking and real-time collaboration within the team.
+                </p>
+            </div>
+            <div>
+                <h2>Continuous Integration (CI)</h2>
+                <p style="font-size: clamp(1rem, 5vw, 1.1rem);">A robust CI pipeline was created in Azure DevOps,
+                    triggered automatically on GitHub pushes. The pipeline included build validation, static code
+                    analysis using Roslyn Analyzer, and automated testing with code coverage reports. This ensured that
+                    all code changes were verified early and met quality standards before integration.
+                </p>
+            </div>
+            <div>
+                <h2>Continuous Deployment (CD)</h2>
+                <p style="font-size: clamp(1rem, 5vw, 1.1rem);">The project implemented a secure CD pipeline using Azure
+                    DevOps Release pipelines. Artifacts from the CI process were deployed directly to an IIS Web Server
+                    using Web Deploy. This end-to-end automation enabled faster, consistent releases while maintaining
+                    deployment integrity through a connected GitHub PAT-based authentication system.
+                </p>
+            </div>
+        </div>
+
+        <h1 class="heading">Gallery</h1>
+        <div class="gallery">
+            <div class="container">
+                <div class="box" style="border-top-left-radius: 3%;">
+                    <img src="../images/proj2-ss1.png" onclick="openLightbox(this)">
+                </div>
+                <div class="box" style="border-top-right-radius: 3%;">
+                    <img src="../images/proj2-ss2.png" onclick="openLightbox(this)">
+                </div>
+            </div>
+            <div class="container">
+                <div class="box" style="border-bottom-left-radius: 3%;">
+                    <img src="../images/proj2-ss3.png" onclick="openLightbox(this)">
+                </div>
+                <div class="box" style="border-bottom-right-radius: 3%;">
+                    <img src="../images/proj2-ss4.png" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="heading">Tech Stack</h1>
+        <div class="tech-stack">
+            <table class="dark-table">
+                <thead>
+                    <tr>
+                        <th>Layer</th>
+                        <th>Stack</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Frontend</td>
+                        <td>ASP.NET MVC</td>
+                    </tr>
+                    <tr>
+                        <td>Source Control</td>
+                        <td>GitHub, Azure Repos</td>
+                    </tr>
+                    <tr>
+                        <td>CI/CD Pipeline</td>
+                        <td>Azure DevOps Pipelines, Azure DevOps Release Pipelines</td>
+                    </tr>
+                    <tr>
+                        <td>Code Analysis</td>
+                        <td>Roslyn Analyzer</td>
+                    </tr>
+                    <tr>
+                        <td>Testing & QA</td>
+                        <td>xUnit or MSTest, Azure Test Plans</td>
+                    </tr>
+                    <tr>
+                        <td>Deployment</td>
+                        <td>IIS Web Deploy</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h1 class="heading">Collaborators</h1>
+        <div class="collaborators" style="margin-bottom: 80px; margin-left: 20px;">
+            <div class="container" style="justify-content: left;">
+                <div class="profile">
+                    <img src="../images/proj2-collab1.jpg" alt="" /><span class="name">MD. Rakib</span>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="heading" style="margin-top: 0;">View Project</h1>
+        <div id="button-container">
+            <div style="display: flex; flex-direction: row; align-items: center; margin-bottom: 10px;">
+                <h1 style="font-size: clamp(1rem, 5vw, 2rem)">Github - &nbsp;</h1>
+                <a href="https://github.com/TasdidKabirAdil/Group16-COMP367Project" target="_blank">
+                    <button class="view-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Click Here</span>
+                    </button>
+                </a>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+                <h1 style="font-size: clamp(1rem, 5vw, 2rem)">Azure DevOps - &nbsp;</h1>
+                <a href="https://dev.azure.com/tadil0977/Group16-COMP367Project" target="_blank">
+                    <button class="view-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Click Here</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full view">
+    </div>
+
+
+    <div id="footer-placeholder" style="background: var(--footer-bg);"></div>
+
+    <script src="../scripts/projects.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+    </script>
+</body>
+
+</html>

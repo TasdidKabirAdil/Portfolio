@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasdid Kabir Adil</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="../styles/button.css">
+  <link rel="stylesheet" href="../styles/theme.css">
+  <script>
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.add('light');
+    }
+  </script>
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div id="hero-bg">
+    <svg id="wave" style="transition: 0.3s; position: absolute; bottom: 0;" viewBox="0 0 1440 150" version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+      <path style="transform:translate(0, 0px); opacity:1" fill="var(--bg)"
+        d="M 0 90 C 37 36 233 -18 351 84 C 390 25 650 -70 760 117 C 788 85 922 30 1031 123 C 1168 -33 1358 18 1449 104 L 1451 105 L 1452 150 C 1417.1 150 1394 150 1371 150 C 1348.6 150 1326 150 1303 150 C 1280 150 1257 150 1234 150 C 1211.4 150 1189 150 1166 150 C 1142.9 150 1120 150 1097 150 C 1074.3 150 1051 150 1029 150 C 1005.7 150 983 150 960 150 C 937.1 150 914 150 891 150 C 868.6 150 846 150 823 150 C 800 150 777 150 754 150 C 731.4 150 709 150 686 150 C 662.9 150 640 150 617 150 C 594.3 150 571 150 549 150 C 525.7 150 503 150 480 150 C 457.1 150 434 150 411 150 C 388.6 150 366 150 343 150 C 320 150 297 150 274 150 C 251.4 150 229 150 206 150 C 182.9 150 160 150 137 150 C 114.3 150 91 150 69 150 C 45.7 150 23 150 11 150 L 0 150 Z">
+      </path>
+    </svg>
+  </div>
+
+  <section id="main">
+    <div id="profile">
+      <div><img src="../images/IMG_E4846 (2)-2.jpg"></div>
+      <div class="intro">
+        <p>Hi, I'm</p><br>
+        <p>Tasdid Kabir</p><br>
+        <p> an enthusiastic and motivated Full-Stack Software
+          Developer. <br><br> I graduated from Centennial
+          College's Software Engineering Technology program. With a solid background in C#, Java,
+          Python,
+          and
+          the MERN stack (MongoDB, Express, React, and Node.js), I've proven that I can pick things up
+          quickly, adjust to new situations, and do well under pressure.
+          I have experience with full-stack web development, database administration (SQL & NoSQL),
+          cloud
+          computing (AWS), and API development. </p>
+      </div>
+    </div>
+
+    <p class="title">Projects</p>
+    <div id="projects">
+      <div class="project-card">
+        <a href="/projects/project-1">
+          <img src="../images/project-1.jpg">
+          <p style="padding: 10px;"><span>HEALTH MONITOR APP</span><br><br><span>A modern
+              full-stack web application designed to support nurses and patients during post-hospital
+              recovery with AI implementation for disease prediction. </span></p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="/projects/project-2">
+          <img src="../images/project-2.jpg">
+          <p style="padding: 10px;"><span>AZURE DEVOPS IMPLEMENTATION</span><br><br><span>Preview version of a Health
+              Monitor app built with ASP.NET MVC,
+              CI/CD-enabled via Azure DevOps and deployed to IIS under Agile workflows.</span></p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="/projects/project-3">
+          <img src="../images/project-3.jpg">
+          <p style="padding: 10px;"><span>BICYCLE THEFT PREDICTIVE ANALYSIS</span><br><br><span>Machine learning model
+              predicting stolen bicycle recovery in Toronto using logistic
+              regression, deployed via Flask API with 97.94% accuracy.</span></p>
+        </a>
+      </div>
+      <div id="button-container">
+        <a href="/projects">
+          <button class="view-more">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">View More</span>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <p class="title">Skills</p>
+    <div id="skills">
+      <div class="skill-card">
+        <img src="../images/python.jpg" alt="Python">
+        <p class="overlay-text">Python</p>
+      </div>
+      <div class="skill-card">
+        <img src="../images/javascript.jpg" alt="Javascript">
+        <p class="overlay-text">Javascript</p>
+      </div>
+      <div class="skill-card">
+        <img src="../images/CSharp.jpg" alt="CSharp">
+        <p class="overlay-text">C Sharp</p>
+      </div>
+      <div class="skill-card">
+        <img src="../images/SQL.jpg" alt="SQL">
+        <p class="overlay-text">SQL</p>
+      </div>
+      <div class="skill-card">
+        <img src="../images/react.jpg" alt="React">
+        <p class="overlay-text">React</p>
+      </div>
+      <div class="skill-card">
+        <img src="../images/java.jpg" alt="Java">
+        <p class="overlay-text">Java</p>
+      </div>
+      <div class="skill-card">
+        <img src="../images/aws.jpg" alt="AWS">
+        <p class="overlay-text">AWS</p>
+      </div>
+      <div class="skill-card">
+        <img src="../images/unity.jpeg" alt="Unity">
+        <p class="overlay-text">Unity</p>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="footer-placeholder" style="background: var(--footer-bg);"></div>
+
+  <script src="../scripts/index.js"></script>
+</body>
+
+</html>

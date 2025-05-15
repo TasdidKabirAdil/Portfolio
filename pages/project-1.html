@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitor App - Tasdid Kabir Adil</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/project.css">
+    <link rel="stylesheet" href="../styles/button.css">
+    <link rel="stylesheet" href="../styles/theme.css">
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light');
+        }
+    </script>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+    <section id="main">
+        <div class="content">
+            <h1 class="title">Health Monitor App
+                <div class="aurora">
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                </div>
+            </h1>
+        </div>
+
+        <h1 class="heading">Overview</h1>
+        <div class="overview">
+            <p>Health Monitor is a modern full-stack web application designed to support patients and nurse
+                practitioners during the critical post-hospital recovery phase. Built using a microfrontend architecture
+                and GraphQL APIs, it enables real-time vital tracking, emergency alerts, and symptom reporting. Patients
+                can log daily health data and receive motivational tips, while nurses can manage clinical records and
+                send guidance. A custom-trained deep learning model also predicts possible diseases based on symptom
+                inputs. The project was developed collaboratively by a team of 4–5 students for COMP308, applying
+                modular architecture, responsive design, and intelligent automation using TensorFlow. It showcases
+                emerging tech like React 18.2+, Apollo Server, and Flask microservices.</p>
+        </div>
+
+        <h1 class="heading">Key Features</h1>
+        <div class="features">
+            <div>
+                <h2>Nurse Features</h2>
+                <p>Nurses can securely register and log in to the system,
+                    enter vital signs for patients—including
+                    temperature, heart rate, blood pressure, respiratory rate, and weight—and view a full history of
+                    clinical visits. They can also send daily motivational tips to their assigned patients, offering
+                    encouragement and improving post-hospital care.
+                </p>
+            </div>
+            <div>
+                <h2>Patient Features</h2>
+                <p>Patients are able to log in to their personal dashboard,
+                    enter daily vital signs, and submit emergency
+                    alerts to healthcare providers. They can also complete symptom checklists for illnesses such as
+                    COVID-19
+                    and RSV, and view motivational messages sent by their nurses to stay engaged in their recovery.
+                </p>
+            </div>
+            <div>
+                <h2>AI Features</h2>
+                <p>The app includes a deep learning model that predicts
+                    possible diseases based on user-reported symptoms.
+                    It uses a multi-layer perceptron trained on a curated dataset of over 400 symptom indicators. The
+                    model
+                    outputs a ranked list of likely conditions and is served via a Flask microservice, integrated
+                    directly
+                    into the patient interface to support faster clinical decision-making.
+                </p>
+            </div>
+        </div>
+
+        <h1 class="heading">Gallery</h1>
+        <div class="gallery">
+            <div class="container">
+                <div class="box" style="border-top-left-radius: 3%;">
+                    <img src="../images/proj1-ss1.png" onclick="openLightbox(this)">
+                </div>
+                <div class="box" style="border-top-right-radius: 3%;">
+                    <img src="../images/proj1-ss2.png" onclick="openLightbox(this)">
+                </div>
+            </div>
+            <div class="container">
+                <div class="box" style="border-bottom-left-radius: 3%;">
+                    <img src="../images/proj1-ss3.png" onclick="openLightbox(this)">
+                </div>
+                <div class="box" style="border-bottom-right-radius: 3%;">
+                    <img src="../images/proj1-ss4.png" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="heading">Tech Stack</h1>
+        <div class="tech-stack">
+            <table class="dark-table">
+                <thead>
+                    <tr>
+                        <th>Layer</th>
+                        <th>Stack</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Frontend</td>
+                        <td>React 18.2+, React Bootstrap, Vite</td>
+                    </tr>
+                    <tr>
+                        <td>Backend</td>
+                        <td>Express.js, Apollo Server, GraphQL</td>
+                    </tr>
+                    <tr>
+                        <td>Microservices</td>
+                        <td>Node.js, Flask (optional for AI)</td>
+                    </tr>
+                    <tr>
+                        <td>Database</td>
+                        <td>MongoDB (Mongoose ODM)</td>
+                    </tr>
+                    <tr>
+                        <td>Architecture</td>
+                        <td>Micro Frontends + Microservices</td>
+                    </tr>
+                    <tr>
+                        <td>Styling</td>
+                        <td>React Bootstrap, Responsive Web Design</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h1 class="heading">Collaborators</h1>
+        <div class="collaborators" style="margin-bottom: 80px;">
+            <div class="container">
+                <div class="profile">
+                    <img src="../images/proj1-collab1.jpg" alt="" /><span class="name">Ignacio</span>
+                </div>
+                <div class="profile">
+                    <img src="../images/proj1-collab2.jpg" alt="" /><span class="name">Kunai</span>
+                </div>
+
+                <div class="profile">
+                    <img src="../images/proj1-collab3.jpg" alt="" /><span class="name">Sebastian</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="button-container" style="display: flex; flex-direction: row; align-items: center;">
+            <h1>View Project On GitHub - &nbsp;</h1>
+            <a href="https://github.com/TasdidKabirAdil/Group4-COMP308Project" target="_blank">
+                <button class="view-more">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Click Here</span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full view">
+    </div>
+
+
+    <div id="footer-placeholder" style="background: var(--footer-bg);"></div>
+
+    <script src="../scripts/projects.js"></script>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+    </script>
+</body>
+
+</html>
